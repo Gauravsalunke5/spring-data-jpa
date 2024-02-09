@@ -1,6 +1,7 @@
 package com.gaurav.spring.data.jpa.repository;
 
 import com.gaurav.spring.data.jpa.entity.Course;
+import com.gaurav.spring.data.jpa.entity.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,23 +24,23 @@ class CourseRepositoryTest {
         System.out.println("courses = " + courses);
     }
 
-//    @Test
-//    public void saveCourseWithTeacher() {
-//        Teacher teacher = Teacher.builder()
-//                .firstName("Priyanka")
-//                .lastName("Singh")
-//                .build();
-//
-//        Course course = Course
-//                .builder()
-//                .title("Python")
-//                .credit(6)
-//                .teacher(teacher)
-//                .build();
-//
-//        courseRepository.save(course);
-//    }
-//
+    @Test
+    public void saveCourseWithTeacher() {
+        Teacher teacher = Teacher.builder()
+                .firstName("Tf1")
+                .lastName("Tl1")
+                .build();
+
+        Course course = Course
+                .builder()
+                .title("NET")
+                .credit(6)
+                .teacher(teacher)
+                .build();
+
+        courseRepository.save(course);
+    }
+
 //    @Test
 //    public void findAllPagination(){
 //        Pageable firstPagewithThreeRecords =
